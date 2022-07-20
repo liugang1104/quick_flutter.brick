@@ -1,4 +1,8 @@
 name: quick_flutter_federated
 description: A new brick created with the Mason CLI.
 vars:
-  - project
+  project:
+    type: string
+    description: Your plugn name
+    default: my_plugin
+    prompt: What is your plugin name?
