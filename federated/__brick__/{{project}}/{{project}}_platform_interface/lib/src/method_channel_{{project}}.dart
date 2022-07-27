@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 
 import '{{project}}_platform_interface.dart';
 
-class MethodChannel{{.pascalCase()}} extends {{.pascalCase()}}Platform {
+class MethodChannel{{project.pascalCase()}} extends {{project.pascalCase()}}Platform {
   static const MethodChannel _channel =
       const MethodChannel('{{project}}');
 
