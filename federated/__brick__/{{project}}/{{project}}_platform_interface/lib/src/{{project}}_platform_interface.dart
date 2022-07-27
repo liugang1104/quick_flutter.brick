@@ -7,11 +7,11 @@ abstract class {{project.pascalCase()}}Platform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static {{project.pascalCase()}}Platform _instance = MethodChannel{{.pascalCase()}}();
+  static {{project.pascalCase()}}Platform _instance = MethodChannel{{project.pascalCase()}}();
 
   static {{project.pascalCase()}}Platform get instance => _instance;
 
-  static set instance({{.pascalCase()}}Platform instance) {
+  static set instance({{project.pascalCase()}}Platform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }
