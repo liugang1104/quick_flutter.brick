@@ -4,32 +4,32 @@ import 'package:mockito/mockito.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 void main() {
-  group('${{project}}Platform', () {
+  group('${{project.pascalCase()}}Platform', () {
     test('$MethodChannel{{project}} is the default instance', () {
-      expect({{project}}Platform.instance, isA<MethodChannel{{project}}>());
+      expect({{project.pascalCase()}}Platform.instance, isA<MethodChannel{{project.pascalCase()}}>());
     });
 
     test('Cannot be implemented with `implements`', () {
       expect(() {
-        {{project}}Platform.instance = Implements{{project}}Platform();
+        {{project.pascalCase()}}Platform.instance = Implements{{project.pascalCase()}}Platform();
       }, throwsA(isA<Error>()));
     });
 
     test('Can be extended', () {
-      {{project}}Platform.instance = Extends{{project}}Platform();
+      {{project.pascalCase()}}Platform.instance = Extends{{project.pascalCase()}}Platform();
     });
 
     test('Can be mocked with `implements`', () {
-      {{project}}Platform.instance = ImplementsWithIsMock();
+      {{project.pascalCase()}}Platform.instance = ImplementsWithIsMock();
     });
   });
 }
 
 class ImplementsWithIsMock extends Mock
     with MockPlatformInterfaceMixin
-    implements {{project}}Platform {}
+    implements {{project.pascalCase()}}Platform {}
 
-class Implements{{project}}Platform extends Mock
-    implements {{project}}Platform {}
+class Implements{{project.pascalCase()}}Platform extends Mock
+    implements {{project.pascalCase()}}Platform {}
 
-class Extends{{project}}Platform extends {{project}}Platform {}
+class Extends{{project.pascalCase()}}Platform extends {{project.pascalCase()}}Platform {}
