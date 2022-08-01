@@ -1,4 +1,4 @@
 #import <Flutter/Flutter.h>
 
-@interface {{project}}Plugin : NSObject<FlutterPlugin>
+@interface {{project.pascalCase()}}Plugin : NSObject<FlutterPlugin>
 @end
